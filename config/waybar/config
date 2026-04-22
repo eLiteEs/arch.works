@@ -1,0 +1,116 @@
+[
+	{
+		"name": "top",
+		"layer": "top",
+		"position": "top",
+		"height": 30,
+		"modules-left": [],
+		"modules-center": ["hyprland/window"],
+		"modules-right": ["disk", "cpu", "memory", "clock"],
+
+		"hyprland/window": {
+			"format": "{}",
+			"max-length": 60
+		},
+
+		"clock": {
+			"format": "{:%H:%M  %d/%m/%Y}"
+		},
+
+		"cpu": {
+			"interval": 10,
+			"format": "{}% ",
+			"max-length": 10
+		},
+
+		"memory": {
+			"interval": 30,
+			"format": "RAM: {used:0.1f}G/{total:0.1f}G  swap: {swapUsed:0.1f}G/{swapTotal:0.1f}G"
+		},
+
+		"disk": {
+			"interval": 30,
+			"format": "Disk: {percentage_used}%",
+			"path": "/"
+		},
+
+	},
+	{
+		"name":"left",
+		"layer": "top",
+		"position": "left",
+		"width": 36,
+		"modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+		"modules-center": [],
+		"modules-right": ["wireplumber", "group/group-power"],
+
+		"hyprland/workspaces": {
+			"format": "{id}",
+			"on-click": "activate"
+		},
+
+		"wlr/taskbar": {
+			"format": "{icon}",
+			"icon-size": 14,
+			"icon-theme": "Numix-Circle",
+			"tooltip-format": "{title}",
+			"on-click": "activate",
+			"on-click-middle": "close",
+			"ignore-list": [
+				"Alacritty"
+			],
+			"app_ids-mapping": {
+				"firefoxdeveloperedition": "firefox-developer-edition"
+			},
+			"rewrite": {
+				"Firefox Web Browser": "Firefox",
+				"Foot Server": "Terminal",
+				".*(steam_app_[0-9]+).*": "Game"
+			}
+		},
+
+		"group/group-power": {
+			"orientation": "inherit",
+			"drawer": {
+				"transition-duration": 500,
+				"children-class": "not-power",
+				"transition-left-to-right": false,
+			},
+			"modules": [
+				"custom/power", 
+				"custom/quit",
+				"custom/lock",
+				"custom/reboot",
+			]
+		},
+		"custom/quit": {
+			"format": "󰗼",
+			"tooltip": false,
+			"on-click": "hyprctl dispatch exit"
+		},
+		"custom/lock": {
+			"format": "󰍁",
+			"tooltip": false,
+			"on-click": "swaylock"
+		},
+		"custom/reboot": {
+			"format": "󰜉",
+			"tooltip": false,
+			"on-click": "reboot"
+		},
+		"custom/power": {
+			"format": "",
+			"tooltip": false,
+			"on-click": "shutdown now"
+		},
+
+
+		"wireplumber": {
+			"format": "{volume}%",
+			"format-muted": "",
+			"on-click": "helvum",
+			"on-double-click": "pavucontrol",
+			"format-icons": ["", "", ""]
+		},
+	}
+]

@@ -1,0 +1,102 @@
+* {
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 13px;
+}
+
+window#waybar {
+    background: rgba(30, 30, 46, 0.8);
+    color: #cdd6f4;
+}
+
+/* Estilos para la barra lateral específicamente */
+#waybar.left {
+    background: rgba(30, 30, 46, 0.9);
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #6c7086;
+    border-radius: 0;
+}
+
+#workspaces button.active {
+    color: #88c0d0;
+    border-right: 2px solid #88c0d0;
+}
+
+#window {
+    color: #cdd6f4;
+    font-weight: 700;
+}
+
+#clock {
+    padding-right: 10px;
+    color: #a6e3a1;
+}
+
+#cpu {
+    padding-right: 10px;
+    color: #c5de27;
+}
+
+#memory {
+    padding-right: 20px;
+    color: #c5de27;
+}
+
+#disk {
+    padding-right: 10px;
+    color: #c5de27;
+}
+
+/* Estilos para el grupo de power - Versión corregida sin propiedades no válidas */
+#group-group-power {
+    margin: 0 2px;
+}
+
+/* Botones cuadrados - Versión compatible con GTK CSS */
+#custom-power,
+#custom-quit,
+#custom-lock,
+#custom-reboot {
+    background-color: #313244;
+    border-radius: 0;
+    padding: 4px 0;     /* padding vertical */
+    margin: 0 1px;
+    min-width: 30px;
+    min-height: 30px;
+    font-size: 16px;
+}
+
+/* Efectos hover */
+#custom-power:hover,
+#custom-quit:hover,
+#custom-lock:hover,
+#custom-reboot:hover {
+    background-color: #45475a;
+}
+
+/* Colores específicos al hacer hover */
+#custom-power:hover {
+    color: #f38ba8;
+}
+
+#custom-reboot:hover {
+    color: #f9e2af;
+}
+
+#custom-lock:hover {
+    color: #89b4fa;
+}
+
+#custom-quit:hover {
+    color: #cba6f7;
+}
+
+/* Ajustes para la barra vertical */
+#wireplumber {
+    padding: 4px 0;     /* padding vertical */
+    margin: 0 1px;
+    min-width: 30px;
+    min-height: 30px;
+}

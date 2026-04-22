@@ -1,0 +1,26 @@
+[global]
+    origin = bottom-right
+    offset = 10x10
+    width = 300
+    height = 80
+    transparency = 25          # 0 = opaco, 50 = semitransparente
+    corner_radius = 0
+    gap_size = 2
+    timeout = 5
+    font = Noto Sans
+    format = "<b>%s</b>\n%b"
+
+[urgency_low]
+    background = "#3c3c3c"
+    foreground = "#fefefe"
+    timeout = 5
+
+[urgency_normal]
+    background = "#3c3c3c"
+    foreground = "#fefefe"
+    timeout = 5
+
+[urgency_critical]
+    background = "#c0392b"
+    foreground = "#ffffff"
+    timeout = 0
