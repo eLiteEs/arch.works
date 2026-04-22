@@ -4,8 +4,8 @@
 #       make deps           (solo instala dependencias)
 #       make help           (muestra esta ayuda)
 
-DOTFILES_DIR := $(shell pwd)
-CONFIG_DIR   := config
+DOTFILES_DIR := config 
+CONFIG_DIR   := ~/.config
 
 # ─── Paquetes pacman ───────────────────────────────────────────────────────────
 PACMAN_PKGS := \
